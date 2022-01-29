@@ -5,7 +5,7 @@ function readyNow() {
     // console.log('jQuery running?');
     // on click, append box to DOM
     $( "#submit-button" ).on( 'click', buttonClick)
-    // $( "#delete-button" ).on( 'click', run function that deletes row and subtracts total value)
+    $( "#myTable" ).on( 'click', '#delete-button', deleteButton)
 }    
 
 let employeeArray = [];
@@ -41,3 +41,6 @@ let employeeArray = [];
 
 
 
+function deleteButton() {
+    console.log('sup player?');
+}
