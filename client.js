@@ -4,20 +4,29 @@ $(document).ready(readyNow);
 function readyNow() {
     console.log('jQuery running?');
     // on click, append box to DOM
+    $( "#submit-button" ).on( 'click', buttonClick)
+
 }    
 
 let employeeArray = [];
 
 
-function newEmployee(firstNameInput, lastNameInput, idInput, titleInput, annualSalaryInput){
+  
+    
+
+function buttonClick(){ //firstNameInput, lastNameInput, idInput, titleInput, annualSalaryInput
     let employeeObject = {
-        firstName: firstNameInput,
-        lastName: lastNameInput,
-        ID: idInput,
-        title: titleInput,
-        annualSalary: annualSalaryInput
+        firstName: $('#first-name').val(),
+        lastName: $('#last-name').val(),
+        ID: $('#ID').val(),
+        title: $('#title').val(),
+        annualSalary: $('#annualSalary').val()
         }
         employeeArray.push(employeeObject)
+        console.log(employeeObject);
+        
   } 
-  console.log(newEmployee ('colin', 'jaworski', 47, 'manager', 12345));
-  
+
+
+
+//   $(append(newEmployee.firstNameInput));
