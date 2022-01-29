@@ -20,11 +20,17 @@ function buttonClick(){ //firstNameInput, lastNameInput, idInput, titleInput, an
         lastName: $('#last-name').val(),
         ID: $('#ID').val(),
         title: $('#title').val(),
-        annualSalary: $('#annualSalary').val()
+        annualSalary: $('#annual-salary').val()
         }
+        
         employeeArray.push(employeeObject)
         console.log(employeeObject);
-        
+
+        $( '#first-name' ).val( '' );
+        $( '#last-name' ).val( '' );
+        $( '#ID' ).val( '' );
+        $( '#title' ).val( '' );
+        $( '#annual-salary' ).val( '' );
   } 
 
 
