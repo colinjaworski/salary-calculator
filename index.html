@@ -18,7 +18,7 @@
         <input type="text" id="last-name"placeholder="Last Name">  
         <input type="text" id="ID"placeholder="ID">  
         <input type="text" id="title"placeholder="Title">  
-        <input type="text" id="annual-salary"placeholder="Annual Salary">  
+        <input type="number" id="annual-salary"placeholder="Annual Salary">  
         
         
         
@@ -26,7 +26,7 @@
     
         <h2>Employees</h2>
 
-        <table id="myTable">
+        <table>
 
 <!-- where table header goes -->
   <tr> 
@@ -35,15 +35,11 @@
     <th>ID</th>
     <th>Title</th>
     <th>Annual Salary</th>
+    <thid="delete-button"></th>
   </tr>
   <!-- give id and append input to the DOM here -->
-  <tr>
-    <td id= "input1">
-    <td id= "input2">
-    <td id= "input3">
-    <td id= "input4">
-    <td id= "input4">
-  </tr>
+  <tbody id="myTable"></tbody>
+  
   
 
 </table>
