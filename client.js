@@ -40,7 +40,7 @@ let total = 0;
         $( '#title' ).val( '' );
         $( '#annual-salary' ).val( '' );
 
-        total += employeeObject.annualSalary
+        total += (employeeObject.annualSalary) / 12
         employeeSal(total)
         // $( "#submit-button" ).on( 'click', employeeSal)
   } 
