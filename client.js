@@ -7,6 +7,7 @@ function readyNow() {
     $( "#submit-button" ).on( 'click', buttonClick)
     $( "#myTable" ).on( 'click', '#delete-button', removeRow)
     // target "myTable" and run a function that removes rows when clicked
+    $( "#submit-button" ).on( 'click', redBackground)
     
 }    
 
@@ -45,9 +46,7 @@ let total = 0;
         employeeSal(total)
         // $( "#submit-button" ).on( 'click', employeeSal)
 
-        if (total > 1) {
-            console.log('redbackground')
-        }
+       
   } 
 
 function removeRow() {
@@ -55,12 +54,22 @@ function removeRow() {
     $(this).parents("tr").remove(); 
 }
 
+function redBackground() {
+    if (total>20000) {
+    // console.log('the total value is', total);
+    $("#total").css("background", "red");
+    } else {
+    $("#total").css("background", "white");
+        
+    }
+}
 
 
 function employeeSal(total) {
-    console.log('in employee salary', total);
+    // console.log('in employee salary', total);
     $("#monthly-value").empty()
     $("#monthly-value").append(`${total}`)
 }
+
 
 
