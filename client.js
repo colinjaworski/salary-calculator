@@ -44,12 +44,18 @@ let total = 0;
         total += (employeeObject.annualSalary) / 12
         employeeSal(total)
         // $( "#submit-button" ).on( 'click', employeeSal)
+
+        if (total > 1) {
+            console.log('redbackground')
+        }
   } 
 
 function removeRow() {
     // console.log('in removeRow');
     $(this).parents("tr").remove(); 
 }
+
+
 
 function employeeSal(total) {
     console.log('in employee salary', total);
