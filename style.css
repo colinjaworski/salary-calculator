@@ -18,3 +18,7 @@ td, th{
 table {
     width: 100%;
 }
+
+#monthly-value {
+    float: right 
+}

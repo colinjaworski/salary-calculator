@@ -6,10 +6,12 @@ function readyNow() {
     // on click, append box to DOM
     $( "#submit-button" ).on( 'click', buttonClick)
     $( "#myTable" ).on( 'click', '#delete-button', deleteButton)
+    
+
 }    
 
 let employeeArray = [];
-
+let total = 0;
 
   function buttonClick(){ //firstNameInput, lastNameInput, idInput, titleInput, annualSalaryInput
     let employeeObject = {
@@ -17,7 +19,7 @@ let employeeArray = [];
         lastName: $('#last-name').val(),
         ID: $('#ID').val(),
         title: $('#title').val(),
-        annualSalary: $('#annual-salary').val()
+        annualSalary: Number($('#annual-salary').val())
         }
         
         employeeArray.push(employeeObject)
@@ -37,10 +39,18 @@ let employeeArray = [];
         $( '#ID' ).val( '' );
         $( '#title' ).val( '' );
         $( '#annual-salary' ).val( '' );
+
+        total += employeeObject.annualSalary
+        employeeSal(total)
+        // $( "#submit-button" ).on( 'click', employeeSal)
   } 
-
-
 
 function deleteButton() {
     console.log('sup player?');
+}
+
+function employeeSal(total) {
+    console.log('in employee salary', total);
+    $("#monthly-value").empty()
+    $("#monthly-value").append(`${total}`)
 }
