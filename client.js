@@ -5,10 +5,11 @@ function readyNow() {
     // console.log('jQuery running?');
     // on click, append box to DOM
     $( "#submit-button" ).on( 'click', buttonClick)
-    $( "#myTable" ).on( 'click', '#delete-button', deleteButton)
+    $( "#myTable" ).on( 'click', '#delete-button', removeRow)
+    // target "myTable" and run a function that removes rows when clicked
     
-
 }    
+
 
 let employeeArray = [];
 let total = 0;
@@ -45,8 +46,9 @@ let total = 0;
         // $( "#submit-button" ).on( 'click', employeeSal)
   } 
 
-function deleteButton() {
-    console.log('sup player?');
+function removeRow() {
+    // console.log('in removeRow');
+    $(this).parents("tr").remove(); 
 }
 
 function employeeSal(total) {
@@ -54,3 +56,5 @@ function employeeSal(total) {
     $("#monthly-value").empty()
     $("#monthly-value").append(`${total}`)
 }
+
+
