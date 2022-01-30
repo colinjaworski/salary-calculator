@@ -44,9 +44,7 @@ let total = 0;
 
         total += (employeeObject.annualSalary) / 12
         employeeSal(total)
-        // $( "#submit-button" ).on( 'click', employeeSal)
-
-       
+        // $( "#submit-button" ).on( 'click', employeeSal)     
   } 
 
 function removeRow() {
@@ -59,8 +57,7 @@ function redBackground() {
     // console.log('the total value is', total);
     $("#total").css("background", "red");
     } else {
-    $("#total").css("background", "white");
-        
+    $("#total").css("background", "white"); 
     }
 }
 
